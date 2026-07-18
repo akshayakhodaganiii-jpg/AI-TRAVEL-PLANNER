@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* =============================================
+   Design System Tokens — 03_DESIGN_SYSTEM.md
+   ============================================= */
+
+@theme {
+  /* Primary — deep terracotta/clay */
+  --color-primary: #C96F4A;
+  --color-primary-dark: #A85838;
+  --color-primary-light: #E8A97F;
+
+  /* Secondary — muted sage/teal */
+  --color-secondary: #5B8A72;
+  --color-secondary-dark: #436956;
+  --color-secondary-light: #A8C7B5;
+
+  /* Neutrals — warm off-whites */
+  --color-bg: #FBF7F2;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-soft: #F3EBE1;
+
+  --color-text-primary: #2B2420;
+  --color-text-secondary: #6B5F55;
+  --color-text-muted: #A6998C;
+
+  --color-border: #E8DFD3;
+
+  /* Semantic */
+  --color-success: #5B8A72;
+  --color-error: #C4553F;
+  --color-warning: #D4A03C;
+
+  /* Typography */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* =============================================
+   Base Styles
+   ============================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+}
+
+/* =============================================
+   Typography — per 03_DESIGN_SYSTEM.md
+   ============================================= */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+p {
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+label {
+  font-family: var(--font-body);
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+/* =============================================
+   Utility Classes
+   ============================================= */
+
+.body-lg {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.body-base {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.body-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Hero gradient background */
+.gradient-hero {
+  background: linear-gradient(135deg, #FBF7F2 0%, #F3E1D0 45%, #E8C5A8 100%);
+}
+
+/* =============================================
+   Reduced Motion Preference
+   ============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
